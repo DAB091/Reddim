@@ -1,0 +1,189 @@
+/* ========================
+   PRIVACIDAD — estilos propios
+   (complementa style.css)
+======================== */
+
+/* ========================
+   LAYOUT
+======================== */
+.privacy-main {
+  background: var(--cream);
+  padding: 4rem 2rem 6rem;
+}
+.privacy-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ========================
+   ENCABEZADO
+======================== */
+.privacy-header {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.privacy-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.privacy-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.privacy-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--teal);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.privacy-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ========================
+   BLOQUE DESTACADO
+======================== */
+.privacy-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--teal);
+  border-radius: 10px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 2px 10px var(--shadow);
+  opacity: 0;
+  transform: translateY(20px);
+}
+.privacy-highlight.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.privacy-highlight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.privacy-highlight p {
+  font-size: 0.97rem;
+  color: var(--ink);
+  line-height: 1.7;
+}
+.privacy-highlight strong { color: var(--teal); font-weight: 500; }
+
+/* ========================
+   SECCIONES
+======================== */
+.privacy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 12px var(--shadow);
+  overflow: hidden;
+}
+
+.privacy-section {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.5rem;
+  padding: 2rem 2.2rem;
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(16px);
+}
+.privacy-section:last-child { border-bottom: none; }
+.privacy-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.privacy-section-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  padding-top: 3px;
+  line-height: 1;
+}
+
+.privacy-section-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.privacy-section-body p {
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+.privacy-section-body p:last-child { margin-bottom: 0; }
+
+.privacy-section-body ul {
+  margin: 0.2rem 0 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.privacy-section-body ul li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.privacy-section-body ul li::marker { color: var(--gold); }
+.privacy-section-body strong { color: var(--teal); font-weight: 500; }
+
+/* Botones de contacto al pie */
+.privacy-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.privacy-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--teal);
+  color: white;
+  transition: background 0.2s;
+}
+.privacy-contact-btn:hover { background: var(--teal-dark); }
+.privacy-contact-btn.secondary {
+  background: none;
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+}
+.privacy-contact-btn.secondary:hover { background: var(--teal); color: white; }
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 500px) {
+  .privacy-section {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .privacy-section-num { font-size: 1rem; }
+  .privacy-contact-links { flex-direction: column; }
+  .privacy-contact-btn { justify-content: center; }
+}
