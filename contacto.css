@@ -1,0 +1,326 @@
+/* ========================
+   CONTACTO — estilos propios
+   (complementa style.css)
+======================== */
+
+.nav-active {
+  color: var(--gold) !important;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+/* ========================
+   HERO
+======================== */
+.contact-hero {
+  background: var(--teal);
+  padding: 4.5rem 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 36px;
+  background: var(--cream);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.contact-hero-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.contact-hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.7rem;
+}
+.contact-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--cream);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.contact-hero-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.75;
+}
+
+/* ========================
+   LAYOUT
+======================== */
+.contact-main {
+  background: var(--cream);
+  padding: 4rem 2rem 5rem;
+}
+.contact-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ========================
+   GRILLA DE TARJETAS
+======================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: var(--ink);
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.contact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(42,95,96,0.15);
+}
+
+/* Icono */
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-card-icon svg { width: 26px; height: 26px; }
+
+/* Colores por red */
+.whatsapp-card  { border-top: 4px solid #25D366; }
+.whatsapp-card  .contact-card-icon { background: #e8fef0; color: #25D366; }
+.whatsapp-card  .contact-card-platform { color: #25D366; }
+
+.instagram-card { border-top: 4px solid #E1306C; }
+.instagram-card .contact-card-icon { background: #fde8f0; color: #E1306C; }
+.instagram-card .contact-card-platform { color: #E1306C; }
+
+.facebook-card  { border-top: 4px solid #1877F2; }
+.facebook-card  .contact-card-icon { background: #e8f0fe; color: #1877F2; }
+.facebook-card  .contact-card-platform { color: #1877F2; }
+
+.email-card     { border-top: 4px solid var(--teal); }
+.email-card     .contact-card-icon { background: #e8f4f4; color: var(--teal); }
+.email-card     .contact-card-platform { color: var(--teal); }
+
+/* Contenido */
+.contact-card-body { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+
+.contact-card-platform {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.contact-card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--teal);
+  line-height: 1.25;
+}
+.contact-card-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.contact-card-handle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+/* Flecha */
+.contact-card-arrow {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.6rem;
+  font-size: 1rem;
+  color: var(--border);
+  transition: color 0.2s, transform 0.2s;
+}
+.contact-card:hover .contact-card-arrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+/* ========================
+   FRANJA URGENCIA
+======================== */
+.contact-message {
+  background: var(--teal);
+  border-radius: 14px;
+  padding: 2.2rem 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.contact-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.contact-message-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.contact-message-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+.contact-message-inner > div { flex: 1; min-width: 200px; }
+.contact-message-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+}
+.contact-message-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+}
+.contact-message-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.contact-message-btn:hover { background: #b87a35; }
+
+/* ========================
+   UBICACIÓN
+======================== */
+.contact-location {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.contact-location.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.contact-location-text { flex: 1; }
+.location-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.location-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--teal);
+  margin-bottom: 0.8rem;
+}
+.location-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+}
+.location-desc strong { color: var(--ink); font-weight: 500; }
+
+.contact-location-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  min-width: 160px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.contact-location-badge svg {
+  width: 40px;
+  height: 40px;
+  color: var(--teal);
+  stroke-width: 1.2;
+}
+.contact-location-badge span:not(.location-country) {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--teal);
+  font-weight: 700;
+}
+.location-country {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .contact-message-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .contact-message-btn { width: 100%; justify-content: center; }
+
+  .contact-location {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .contact-location-badge { width: 100%; }
+  .location-eyebrow { text-align: center; }
+}
