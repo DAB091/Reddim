@@ -251,10 +251,12 @@
   letter-spacing: 0.05em;
 }
 
-/* Grid de miembros del equipo */
+/* Grid de miembros del equipo
+   auto-fill: agrega columnas solas al agregar más .team-member
+   min 140px, max 1fr → se acomoda en cualquier ancho */
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1.2rem;
   margin-top: 1rem;
 }
@@ -412,10 +414,9 @@
   }
   .mision-divider { display: none; }
 
-  .team-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
 }
 
 @media (max-width: 500px) {
-  .team-grid { grid-template-columns: 1fr; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
