@@ -23,10 +23,10 @@
  *  titulo    → Título completo del artículo.
  *
  *  fecha     → Formato AAAA-MM-DD. Usado para ordenar por fecha.
- *              Ejemplo: "2026-03-15"
+ *              Ejemplo: "2026-03-08"
  *
  *  fechaTexto→ Fecha en texto legible para mostrar en pantalla.
- *              Ejemplo: "15 de marzo de 2026"
+ *              Ejemplo: "08 de marzo de 2026"
  *
  *  categoria → Una de las siguientes (en minúsculas, sin tilde):
  *              derechos | mujeres | educacion | infancias |
@@ -59,8 +59,8 @@
  *  {
  *    id: 11,
  *    titulo: "Título del nuevo artículo",
- *    fecha: "2026-03-15",
- *    fechaTexto: "15 de marzo de 2026",
+ *    fecha: "2026-03-08",
+ *    fechaTexto: "08 de marzo de 2026",
  *    categoria: "educacion",
  *    imagen: "img/nombre-imagen.jpg",
  *    extracto: "Descripción breve del artículo en 2 o 3 oraciones.",
