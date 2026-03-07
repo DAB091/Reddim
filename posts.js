@@ -78,7 +78,7 @@ const ARTICULOS = [
     id: 11,
     titulo: "El origen de REDIM: cuando la educación se convierte en acto de defensa",
     fecha: "2026-03-08",
-    fechaTexto: "8 de marzo de 2026",
+    fechaTexto: "08 de marzo de 2026",
     categoria: "educacion",
     imagen: "img/origen-redim.jpg",
     extracto: "La historia de cómo una profesora de Añatuya decidió que acompañar a sus alumnas no podía terminar en la puerta del aula. El proceso fundacional de la Red Educativa en Defensa de la Infancia y la Mujer.",
