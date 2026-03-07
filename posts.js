@@ -80,7 +80,7 @@ const ARTICULOS = [
     fecha: "2026-03-08",
     fechaTexto: "08 de marzo de 2026",
     categoria: "educacion",
-    imagen: "img/origen-redim.jpg",
+    imagen: "./img/origen-redim.jpg",
     extracto: "La historia de cómo una profesora de Añatuya decidió que acompañar a sus alumnas no podía terminar en la puerta del aula. El proceso fundacional de la Red Educativa en Defensa de la Infancia y la Mujer.",
     tiempo: "7 min",
     destacado: true,
