@@ -12,33 +12,30 @@
 <body>
 
   <!-- HEADER -->
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- SEO básico -->
-  <title>REDIM — Red de Defensa Integral de la Mujer</title>
-  <meta name="description" content="Información, acompañamiento y recursos para la protección de mujeres." />
-
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://redimsgo.org/">
-  <meta property="og:title" content="REDIM — Red de Defensa Integral de la Mujer">
-  <meta property="og:description" content="Información, acompañamiento y recursos para la protección de mujeres.">
-  <meta property="og:image" content="https://redimsgo.org/img/logo.png">
-  <meta property="og:site_name" content="REDIM">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="redimsgo.org">
-  <meta property="twitter:url" content="https://redimsgo.org/">
-  <meta name="twitter:title" content="REDIM — Red de Defensa Integral de la Mujer">
-  <meta name="twitter:description" content="Información, acompañamiento y recursos para la protección de mujeres.">
-  <meta name="twitter:image" content="https://redimsgo.org/img/logo.png">
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-</head>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="./img/logo.png" alt="Logo REDIM" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <span class="logo-name">REDIM</span>
+          <span class="logo-sub">Red Educativa en Defensa de la Infancia y la Mujer</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="./index.html">Inicio</a>
+        <a href="./articulos.html">Artículos</a>
+        <a href="./acerca-de.html">Acerca de</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="./index.html">Inicio</a>
+      <a href="./articulos.html">Artículos</a>
+      <a href="./acerca-de.html">Acerca de</a>
+      <a href="./contacto.html">Contacto</a>
+    </nav>
+  </header>
 
   <!-- HERO STRIP -->
   <div class="hero-strip">
