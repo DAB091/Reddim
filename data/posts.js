@@ -86,5 +86,16 @@ const ARTICULOS = [
     destacado: true,
     url: "origen-redim.html"
   },
-
+{
+  id: 12,
+  titulo: "¿Se puede intervenir? Lo que dice la ley cuando alguien dice que no",
+  fecha: "2026-04-08",
+  fechaTexto: "8 de abril de 2026",
+  categoria: "derechos",
+  imagen: "img/normativa.jpg",
+  extracto: "La Ley 26.061 es clara: proteger los derechos de niñas, niños y adolescentes es responsabilidad de toda la comunidad, no solo del Estado o la escuela.",
+  tiempo: "5 min",
+  destacado: false,
+  url: "normativa-redim.html"
+},
 ];
