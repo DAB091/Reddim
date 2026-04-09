@@ -30,9 +30,16 @@ var observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0 });
 
 animItems.forEach(el => observer.observe(el));
+// Fallback: fuerza visible cualquier elemento animado
+// que no haya sido disparado por el observer (ej. sidebar en pantallas anchas)
+setTimeout(() => {
+  document.querySelectorAll('[data-animate]:not(.visible)').forEach(el => {
+    el.classList.add('visible');
+  });
+}, 1200);
 
 // ========================
 // NEWSLETTER FORM

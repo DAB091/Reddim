@@ -47,7 +47,7 @@
   featuredEl.setAttribute('data-animate', '');
   featuredEl.innerHTML = `
     <div class="post-img-wrap">
-      <img src="${destacado.imagen}" alt="${destacado.titulo}" />
+      <img src="${destacado.imagen}" alt="${destacado.titulo}" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');" />
       <span class="post-tag">Destacado</span>
     </div>
     <div class="post-content">
@@ -68,7 +68,7 @@
     card.setAttribute('data-animate', '');
     card.innerHTML = `
       <div class="post-img-wrap">
-        <img src="${art.imagen}" alt="${art.titulo}" loading="lazy" />
+        <img src="${art.imagen}" alt="${art.titulo}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');" />
       </div>
       <div class="post-content">
         <time class="post-date">${art.fechaTexto}</time>
@@ -101,11 +101,16 @@
   // Usamos un pequeño delay para asegurar que script.js
   // ya inicializó el observer.
   setTimeout(() => {
+    const newCards = container.querySelectorAll('[data-animate]');
     if (typeof observer !== 'undefined') {
-      container.querySelectorAll('[data-animate]').forEach(el => {
+      newCards.forEach(el => {
         if (!el.classList.contains('visible')) observer.observe(el);
       });
+    } else {
+      newCards.forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 80);
+      });
     }
-  }, 50);
+  }, 200);
 
 })();
